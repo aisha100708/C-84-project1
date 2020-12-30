@@ -67,6 +67,86 @@ function my_keydown(event) {
         car2_down();
         console.log("s key is pressed")
     }
+    if (car1_x_position > 700) {
+        console.log("Car-1 Won!!");
+        document.getElementById("game_status").innerHTML = "Car-1 Won the Race...!!";
+    }
+    if (car2_x_position > 700) {
+        console.log("Car-2 Won!!");
+        document.getElementById("game_status").innerHTML = "Car-2 Won the Race...!!";
+    }
 }
-uploadCar1();
-uploadCar2();
+//uploadCar1();
+//uploadCar2();
+function car1_left() {
+    if (car1_x_position >= 0) {
+        car1_x_position = car1_x_position - 10;
+        console.log("When left arrow is pressed, Car-1's x = " + car1_x_position + " । y = " + car1_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car1_up() {
+    if (car1_y_position >= 0) {
+        car1_y_position = car1_y_position - 10;
+        console.log("When up arrow is pressed, Car-1's x = " + car1_x_position + " । y = " + car1_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car1_right() {
+    if (car1_x_position <= 700) {
+        car1_x_position = car1_x_position + 10;
+        console.log("When right arrow is pressed, Car-1's x = " + car1_x_position + " । y = " + car1_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car1_down() {
+    if (car1_y_position <= 500) {
+        car1_y_position = car1_y_position + 10;
+        console.log("When down arrow is pressed, Car-1's x = " + car1_x_position + " । y = " + car1_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car2_left() {
+    if (car2_x_position >= 0) {
+        car2_x_position = car2_x_position - 10;
+        console.log("When left arrow is pressed, Car-2's x = " + car2_x_position + " । y = " + car2_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car2_up() {
+    if (car2_y_position >= 0) {
+        car2_y_position = car2_y_position - 10;
+        console.log("When up arrow is pressed, Car-2's x = " + car2_x_position + " । y = " + car2_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car2_right() {
+    if (car2_x_position <= 700) {
+        car2_x_position = car2_x_position + 10;
+        console.log("When right arrow is pressed, Car-2's x = " + car2_x_position + " । y = " + car2_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
+function car2_down() {
+    if (car2_y_position <= 500) {
+        car2_y_position = car2_y_position + 10;
+        console.log("When down arrow is pressed, Car-2's x = " + car2_x_position + " । y = " + car2_y_position);
+        uploadBackground();
+        uploadCar1();
+        uploadCar2();
+    }
+}
